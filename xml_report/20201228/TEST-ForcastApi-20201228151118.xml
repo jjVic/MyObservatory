@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<testsuite name="ForcastApi-20201228151118" tests="1" time="0.277" failures="0" errors="0">
+	<testcase classname="ForcastApi" name="test_forcast" time="0.277"/>
+	<system-out><![CDATA[parent path: D:\WORKSPACE\MyObservatory
+Today is:20201228
+The day after tomorrow is: 20201230
+The relative humidity on the day after tomorrow 20201230 is 40-90%
+]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>

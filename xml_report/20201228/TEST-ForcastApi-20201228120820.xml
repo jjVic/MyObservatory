@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<testsuite name="ForcastApi-20201228120820" tests="1" time="0.555" failures="0" errors="1">
+	<testcase classname="ForcastApi" name="test_forcast" time="0.555">
+		<error type="AssertionError" message="404 != 200 : Response status is not successfull!"><![CDATA[Traceback (most recent call last):
+  File "test_forcast_api.py", line 18, in test_forcast
+    self.assertEqual(response_status, 200, "Response status is not successfull!")
+AssertionError: 404 != 200 : Response status is not successfull!
+]]></error>
+	</testcase>
+	<system-out><![CDATA[parent path: D:\WORKSPACE\MyObservatory
+]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>

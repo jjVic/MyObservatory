@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<testsuite name="ForcastApi-20201228164112" tests="1" time="5.072" failures="0" errors="1">
+	<testcase classname="ForcastApi" name="test_forcast" time="5.072">
+		<error type="ProxyError" message="HTTPSConnectionPool(host='pda.weather.gov.hk', port=443): Max retries exceeded with url: /locspc/data/fnd_e.xml (Caused by ProxyError('Cannot connect to proxy.', OSError(0, 'Error')))"><![CDATA[Traceback (most recent call last):
+  File "D:\python\lib\site-packages\urllib3\connectionpool.py", line 696, in urlopen
+    self._prepare_proxy(conn)
+  File "D:\python\lib\site-packages\urllib3\connectionpool.py", line 964, in _prepare_proxy
+    conn.connect()
+  File "D:\python\lib\site-packages\urllib3\connection.py", line 359, in connect
+    conn = self._connect_tls_proxy(hostname, conn)
+  File "D:\python\lib\site-packages\urllib3\connection.py", line 496, in _connect_tls_proxy
+    return ssl_wrap_socket(
+  File "D:\python\lib\site-packages\urllib3\util\ssl_.py", line 432, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls)
+  File "D:\python\lib\site-packages\urllib3\util\ssl_.py", line 474, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock)
+  File "D:\python\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "D:\python\lib\ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "D:\python\lib\ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+OSError: [Errno 0] Error
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\python\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "D:\python\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "D:\python\lib\site-packages\urllib3\util\retry.py", line 573, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='pda.weather.gov.hk', port=443): Max retries exceeded with url: /locspc/data/fnd_e.xml (Caused by ProxyError('Cannot connect to proxy.', OSError(0, 'Error')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "test_forcast_api.py", line 17, in test_forcast
+    response_status = forcast_api.get_forcast_response_status()
+  File "D:\WORKSPACE\MyObservatory\api_functionality_support\forcast_api.py", line 12, in get_forcast_response_status
+    return self.get_response_status_code(general.request_method['GET'], general.forcast_data["api-path"])
+  File "D:\WORKSPACE\MyObservatory\support\api_base.py", line 10, in get_response_status_code
+    response = requests.request(request_method, url)
+  File "D:\python\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\python\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\python\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\python\lib\site-packages\requests\adapters.py", line 510, in send
+    raise ProxyError(e, request=request)
+requests.exceptions.ProxyError: HTTPSConnectionPool(host='pda.weather.gov.hk', port=443): Max retries exceeded with url: /locspc/data/fnd_e.xml (Caused by ProxyError('Cannot connect to proxy.', OSError(0, 'Error')))
+]]></error>
+	</testcase>
+	<system-out><![CDATA[parent path: D:\WORKSPACE\MyObservatory
+]]></system-out>
+	<system-err><![CDATA[]]></system-err>
+</testsuite>
